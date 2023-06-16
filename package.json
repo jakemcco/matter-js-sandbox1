@@ -23,7 +23,7 @@
     "conventional-changelog-cli": "^2.1.1",
     "eslint": "^6.8.0",
     "html-webpack-plugin": "^4.5.1",
-    "jest": "^25.1.0",
+    "jest": "^29.5.0",
     "jest-worker": "^24.9.0",
     "json-stringify-pretty-compact": "^2.0.0",
     "matter-tools": "^0.14.0",
@@ -33,14 +33,14 @@
     "poly-decomp": "^0.3.0",
     "puppeteer-core": "^5.5.0",
     "terser-webpack-plugin": "^4.2.3",
-    "webpack": "^4.46.0",
-    "webpack-bundle-analyzer": "^4.4.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.1"
+    "webpack": "^5.87.0",
+    "webpack-bundle-analyzer": "^4.9.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "npm run serve -- --open",
+    "dev": "WEBPACK_DEV_SERVER=true npm run serve -- --open",
     "serve": "webpack-dev-server --no-cache --mode development --config webpack.demo.config.js",
     "watch": "nodemon --watch webpack.demo.config.js --exec \"npm run serve\"",
     "build": "webpack --mode=production --no-hot --no-watch & webpack --mode=production --no-hot --no-watch --env.MINIMIZE",

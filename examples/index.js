@@ -44,5 +44,6 @@ module.exports = {
     terrain: require('./terrain.js'),
     timescale: require('./timescale.js'),
     views: require('./views.js'),
+    viewstest: require('./viewstest.js'),
     wreckingBall: require('./wreckingBall.js')
 };

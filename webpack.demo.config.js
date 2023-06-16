@@ -51,7 +51,7 @@ License ${pkg.license}`;
         optimization: {
             minimize,
             minimizer: [new TerserPlugin({ extractComments: false })],
-            moduleIds: 'hashed',
+            moduleIds: 'deterministic',
             runtimeChunk: { name: `${name}.main` },
             splitChunks: {
                 automaticNameDelimiter: '.',
@@ -96,12 +96,13 @@ License ${pkg.license}`;
             openAnalyzer: true
         })] : []),
         devServer: {
-            contentBase: [resolve('./demo')],
-            watchContentBase: true,
+            static: [resolve('./demo')],
             hot: false,
             compress: true,
-            overlay: true,
-            port: 8000
+            port: 8000,
+            client: {
+                overlay: true
+            }
         }
     };
 };
